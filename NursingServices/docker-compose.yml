@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  nursing-services:
+    container_name: nursing-services
+    build:
+          dockerfile: Dockerfile
+          context: .
+    image: docker.io/oasissys/nursing-services:latest
+    ports:
+      - "8087:8087"
+
+    # networks:
+    #   - oasis-plus-net
+# networks:
+#   oasis-plus-net:
+#     driver: overlay
